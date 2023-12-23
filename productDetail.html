@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h1>Logo</h1>
+        <div class="navLeft">
+          <ul class="hamActive">
+            <li class="liHome"><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+      </div>
+      <div class="hamAndCart">
+          <a href="cart.html" class="cartBag">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <p class="cartValue" id="cartValue">0<p/>
+          </a>
+            <i id="hamburger" class="fa-solid fa-bars"></i>
+          </nav>
+      </div>
+    </header>
+
+    <div class="productSection">
+      <div class="singleProduct">
+        <img
+          src=""
+          width="100%"
+          id="MainImg"
+          alt=""
+        />
+        <div class="smallImg-group">
+          <div class="small-img-col">
+            <img
+              src="./shirts/graphic-shirt-trendy-design-mockup.jpg"
+              alt=""
+              class="small-img"
+            />
+          </div>
+          <div class="small-img-col">
+            <img
+              src="./shirts/graphic-shirt-trendy-design-mockup.jpg
+                "
+              alt=""
+              class="small-img"
+              style="filter: hue-rotate(90deg)"
+            />
+          </div>
+          <div class="small-img-col">
+            <img
+              src="./shirts/graphic-shirt-trendy-design-mockup.jpg
+                "
+              alt=""
+              class="small-img"
+              style="filter: hue-rotate(30deg)"
+            />
+          </div>
+          <div class="small-img-col">
+            <img
+              src="./shirts/graphic-shirt-trendy-design-mockup.jpg
+                "
+              alt=""
+              class="small-img"
+              style="filter: hue-rotate(180deg)"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="productDetails">
+        <h1 class="h1">Men's Fashion Shirt</h1>
+        <h3>Rs 999</h3>
+        <select style="font-family: 'Poppins';" name="" id="">
+          <option value="">s</option>
+          <option value="">m</option>
+          <option value="">l</option>
+          <option value="">xl</option>
+        </select>
+        <div class="selectBtn">
+          <input type="number" name="" id="" value="1" />
+          <button class="addCart">Add To Cart</button>
+        </div>
+        <h4>Product Details</h4>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit enim
+          officiis architecto corporis fugiat quidem quam. Maiores deserunt enim
+          consequatur a velit. Vero eius omnis numquam quas, soluta rem
+          pariatur.
+        </p>
+      </div>
+    </div>
+
+    <div class="products">
+        <h1>Featured Products</h1> 
+        <p>Summer Collection New Modern Design</p>
+ 
+        <div class="productsContainer" id="shop">
+         <div class="product">
+             <img class="productImg" src="./shirts/graphic-shirt-trendy-design-mockup.jpg" alt="">
+             <div class="productData">
+                 <p>adidas</p>
+                 <h4>Shirt for Summer</h4>
+                 <div class="stars">
+                     <i class="fa-solid fa-star"></i>
+                     <i class="fa-solid fa-star"></i>
+                     <i class="fa-solid fa-star"></i>
+                     <i class="fa-solid fa-star"></i>
+                     <i class="fa-solid fa-star"></i>
+                 </div>
+                 <h5>Rs 999</h5>
+                 <i class="cartHere fa-solid fa-cart-shopping"></i>
+             </div>
+         </div>
+         <div class="product">
+             <img src="./shirts/trendy-top-design-mockup-presented-wooden-hanger.jpg" alt="">
+             <div class="productData">
+                 <p>adidas</p>
+                 <h4>Shirt for Summer</h4>
+                 <div class="stars">
+                     <i class="fa-solid fa-star"></i>
+                     <i class="fa-solid fa-star"></i>
+                     <i class="fa-solid fa-star"></i>
+                     <i class="fa-solid fa-star"></i>
+                     <i class="fa-solid fa-star"></i>
+                 </div>
+                 <h5>Rs 999</h5>
+                 <i class="cartHere fa-solid fa-cart-shopping"></i>
+             </div>
+         </div>
+         <div class="product">
+             <img src="./shirts/graphic-tshirt-trendy-design-mockup-presented-wooden-hanger.jpg" alt="">
+             <div class="productData">
+                 <p>adidas</p>
+                 <h4>Shirt for Summer</h4>
+                 <div class="stars">
+                     <i class="fa-solid fa-star"></i>
+                     <i class="fa-solid fa-star"></i>
+                     <i class="fa-solid fa-star"></i>
+                     <i class="fa-solid fa-star"></i>
+                     <i class="fa-solid fa-star"></i>
+                 </div>
+                 <h5>Rs 999</h5>
+                 <i class="cartHere fa-solid fa-cart-shopping"></i>
+             </div>
+         </div>
+        </div>
+     </div>
+
+    <div class="signUp">
+      <div class="signText">
+        <h1>Sign Up For Newsletters</h1>
+        <p>Get E-mail updates about out latest shop and special offers</p>
+      </div>
+      <div class="signInput">
+        <input type="text" placeholder="Enter Your Email Address" />
+        <button>Sign Up</button>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer1">
+          <h1>LOGO</h1>
+          <h5>Contact</h5>
+          <p><span>Address: </span> 563 xyc society abc road, India</p>
+          <p><span>Phone: </span>+91 9858296710 </p>
+          <p><span>Hours: </span>10 AM- 5 PM. MON-SAT</p>
+      </div>
+      <div class="footer2">
+          <h5>About</h5>
+          <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a>Delivery Information</a></li>
+              <li><a>Privacy Policy</a></li>
+              <li><a>Terms & Condtions</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+      </div>
+      <div class="footer3">
+          <h5>My Account</h5>
+          <ul>
+              <li><a>Sign In</a></li>
+              <li><a href="cart.html">View Cart</a></li>
+              <li><a>My Wishlist</a></li>
+              <li><a>Track My Order</a></li>
+              <li><a>Help</a></li>
+          </ul>
+      </div>
+      <div class="footer4">
+          <h5>Install App</h5>
+          <p>From App Store or Google Play</p>
+          <div class="links">
+              <i class="fa-brands fa-app-store"></i>
+              <i class="fa-brands fa-google-play"></i>
+          </div>
+      </div>
+    </footer>
+
+    <script>
+
+      document.addEventListener('DOMContentLoaded', () => {
+      const MainImg = document.querySelector("#MainImg");
+      const smallImg = document.getElementsByClassName("small-img");
+      const h1 = document.querySelector(".h1");
+      const addCart = document.querySelector(".addCart")
+
+      const updateCartValue = () => {
+    const cartValueElement = document.getElementById('cartValue');
+    if (cartValueElement) {
+        cartValueElement.textContent = carts.length;
+            }
+    };
+
+      const selectedProduct = JSON.parse(localStorage.getItem('selectedProduct'));
+        let carts = JSON.parse(localStorage.getItem('carts'));
+        console.log(carts);
+
+    if (selectedProduct) {
+        MainImg.src =  selectedProduct.image;
+        h1.innerHTML = selectedProduct.name;
+        for (let i = 0; i < smallImg.length; i++) {
+            smallImg[i].src = selectedProduct.image;
+        }
+
+    } else {
+        console.error('No selected product found.');
+    }
+
+    console.log(selectedProduct);
+    addCart.addEventListener('click',()=>{
+      let positionThisProductInCart = carts.findIndex((value) => value.product_id == selectedProduct.id);
+    if(carts.length <= 0 || positionThisProductInCart < 0){
+        carts.push({
+            image:selectedProduct.image,
+            product_id: selectedProduct.id,
+            name: selectedProduct.name,
+            price:selectedProduct.price,
+            quantity: 1
+        });
+    }else{
+        carts[positionThisProductInCart].quantity = carts[positionThisProductInCart].quantity + 1;
+    }
+        localStorage.setItem('carts',JSON.stringify(carts));
+        updateCartValue();
+
+      })
+      
+
+
+
+      smallImg[0].addEventListener('click',()=>{
+        MainImg.style.filter = smallImg[0].style.filter
+       
+      })
+      smallImg[1].addEventListener('click',()=>{
+        MainImg.style.filter = smallImg[1].style.filter
+       
+      })
+      smallImg[2].addEventListener('click',()=>{
+        MainImg.style.filter = smallImg[2].style.filter
+       
+      })
+      smallImg[3].addEventListener('click',()=>{
+        MainImg.style.filter = smallImg[3].style.filter
+       
+      })
+
+    });
+
+    </script>
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/c549f2c817.js" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>e-commerce</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h1>Logo</h1>
+        <div class="navLeft">
+          <ul class="hamActive">
+            <li class="liHome"><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+      </div>
+      <div class="hamAndCart">
+          <a href="cart.html" class="cartBag">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <p class="cartValue" id="cartValue">0<p/>
+          </a>
+            <i id="hamburger" class="fa-solid fa-bars"></i>
+          </nav>
+      </div>
+    </header>
+
+    <div class="banner" style="background-image: url(https://images.unsplash.com/photo-1555273941-4b1ffab341b2?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)">
+      <h1>#ABOUT US</h1>
+    </div>
+
+    <div class="knowUS">
+      <img src="https://images.unsplash.com/photo-1528642474498-1af0c17fd8c3?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+      <div class="aboutText">
+        <h1>Who We Are?</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus
+          perspiciatis eligendi aliquam voluptate temporibus illum! Saepe odit
+          error sit vel tempora quia molestiae voluptatibus sint, rerum ipsam
+          amet, veritatis quaerat corrupti architecto quas suscipit inventore?
+          Ea consequuntur ipsum inventore iure officiis et aperiam porro
+          perferendis sint. At doloremque praesentium itaque, ex maiores eius
+          repellendus laboriosam voluptatum explicabo minus consequuntur
+          repellat! Recusandae quis vel animi consequatur, quas excepturi
+          consequuntur eaque rem non nemo, perferendis alias adipisci impedit
+          iure dolorum autem praesentium reprehenderit numquam. Non placeat
+          tenetur, inventore ipsa veritatis nemo aliquam delectus consequuntur
+          illo, maiores iusto odio ex, autem nisi. Fugiat.
+        </p>
+      </div>
+    </div>
+
+    <div class="features">
+      <div class="fClas">
+        <img src="./3968608.jpg" alt="" />
+        <p style="background-color: rgba(205, 81, 81, 0.234)">Free Shipping</p>
+      </div>
+      <div class="fClas">
+        <img src="./3528496.jpg" alt="" />
+        <p style="background-color: rgba(0, 0, 0, 0.182)">Online Order</p>
+      </div>
+      <div class="fClas">
+        <img src="./5240.jpg" alt="" />
+        <p style="background-color: rgba(255, 255, 0, 0.373)">Save Money</p>
+      </div>
+      <div class="fClas">
+        <img src="./4530890.jpg" alt="" />
+        <p style="background-color: rgba(60, 60, 174, 0.395)">Promotions</p>
+      </div>
+      <div class="fClas">
+        <img src="./2206_w023_n003_2531b_p1_2531.jpg" alt="" />
+        <p style="background-color: rgba(0, 255, 255, 0.31)">Happy Sell</p>
+      </div>
+      <div class="fClas">
+        <img src="./Wavy_Bus-31_Single-02.jpg" alt="" />
+        <p style="background-color: rgba(255, 166, 0, 0.418)">F24/7 Support</p>
+      </div>
+    </div>
+
+    <div class="signUp">
+      <div class="signText">
+        <h1>Sign Up For Newsletters</h1>
+        <p>Get E-mail updates about out latest shop and special offers</p>
+      </div>
+      <div class="signInput">
+        <input type="text" placeholder="Enter Your Email Address" />
+        <button>Sign Up</button>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer1">
+          <h1>LOGO</h1>
+          <h5>Contact</h5>
+          <p><span>Address: </span> 563 xyc society abc road, India</p>
+          <p><span>Phone: </span>+91 9858296710 </p>
+          <p><span>Hours: </span>10 AM- 5 PM. MON-SAT</p>
+      </div>
+      <div class="footer2">
+          <h5>About</h5>
+          <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a>Delivery Information</a></li>
+              <li><a>Privacy Policy</a></li>
+              <li><a>Terms & Condtions</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+      </div>
+      <div class="footer3">
+          <h5>My Account</h5>
+          <ul>
+              <li><a>Sign In</a></li>
+              <li><a href="cart.html">View Cart</a></li>
+              <li><a>My Wishlist</a></li>
+              <li><a>Track My Order</a></li>
+              <li><a>Help</a></li>
+          </ul>
+      </div>
+      <div class="footer4">
+          <h5>Install App</h5>
+          <p>From App Store or Google Play</p>
+          <div class="links">
+              <i class="fa-brands fa-app-store"></i>
+              <i class="fa-brands fa-google-play"></i>
+          </div>
+      </div>
+  </footer>
+
+
+    <script>
+      let carts = JSON.parse(localStorage.getItem("carts"))
+      const updateCartValue = () => {
+  const cartValueElement = document.getElementById('cartValue');
+  if (cartValueElement) {
+  cartValueElement.textContent = carts.length;
+  }
+  };
+  updateCartValue();
+</script>
+    <script src="script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/c549f2c817.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,457 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalnia:wght@300;400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300&family=Roboto:wght@300;400&family=Teko:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Kalnia";
+}
+
+header {
+    position: sticky;
+    left: 0;
+    top: 0;
+    z-index: 10;
+}
+
+nav {
+    background-color: white;
+    box-shadow: 1px -3px 7px black;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.867);
+    justify-content: space-between;
+    padding: 1.5rem 4rem;
+    font-weight: 600;
+}
+
+#hamburger {
+    font-size: 2rem;
+    color: #102f1c;
+    display: none;
+}
+
+nav i {
+    font-size: 1.3rem;
+}
+
+nav h1 {
+    font-size: 2rem;
+    color: #304D30;
+}
+
+.navLeft {
+    margin-right: 2rem;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.navLeft ul {
+    display: flex;
+    gap: 40px;
+    
+}
+
+.navLeft ul li a {
+    text-decoration: none;
+    color: #304d30da;
+}
+
+.navLeft ul li {
+    position: relative;
+}
+
+.liHome a{
+    color: #102f1c
+}
+
+.navLeft ul li {
+    list-style: none;
+    font-size: 1.3rem;
+    transition: .2s linear;
+}
+
+.navLeft ul li a:hover {
+    color: #16302096;
+}
+
+ul li a.liHome::after ,
+ul li a:hover::after{
+    content: "";
+    width: 50%;
+    height: 2px;
+    background-color: #16302096;
+    position: absolute;
+    bottom: -4px;
+    left: 0px;
+}
+
+
+/* BANNER */
+
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    min-height: 30vh;
+    background-image: url("./banner/19143282.jpg");
+    background-size: cover;
+    color: white;
+}
+.banner h1 {
+    text-transform: uppercase;
+    font-size: 4rem;
+    letter-spacing: 5px;
+    font-family: "Teko";
+}
+
+/* SHOP */
+
+/* PRODUCTS */
+
+.products{
+    padding-block: 1rem;
+    background-color: rgba(227, 227, 227, 0.396);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+
+}
+
+.productsContainer {
+    padding: 2rem 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+.product img {
+    border-radius: 30px;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border: 1px solid rgba(46, 44, 44, 0.356);
+    width: 20%;
+    border-radius: 30px;
+    box-shadow: 0px 1px 2px rgba(58, 56, 56, 0.375);
+    gap: 10px;
+    position: relative;
+    transition: .2s linear;
+    cursor: pointer;
+}
+
+.productData {
+    display: flex;
+    gap: 3px;
+    flex-direction: column;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.productData i {
+    cursor: pointer;
+    color: rgb(14, 105, 23);
+}
+
+.cartHere {
+    position: absolute;
+    right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    bottom: 20px;
+    font-size: 1.3rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+    background-color: #bfcfbf;
+}
+
+.cartHere:hover{
+    color: black;
+    background-color: white;
+}
+
+.stars i {
+    color: gold;
+}
+
+.productData p {
+    color: gray;
+    font-size: 0.8rem;
+}
+
+.productData h4 {
+    font-family: "Poppins";
+}
+
+.productData h5 {
+    font-family: "Roboto";
+}
+
+.product:hover {
+    scale: 1.01;
+    box-shadow: 0px 1px 8px rgba(58, 56, 56, 0.675);
+}
+
+/* SING UP */
+.signUp {
+    background-image: url("https://img.freepik.com/free-photo/beautiful-scenery-summit-mount-everest-covered-with-snow-white-clouds_181624-21317.jpg?w=996&t=st=1702929546~exp=1702930146~hmac=da3e3f66e223de99009c8d7696e1accde631b2ac41606c42e3fc9e4098433e76");
+    background-size: cover;
+    height: 30vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.signText h1 {
+    color: white;
+    font-size: 2.3rem;
+    letter-spacing: 2px;
+}
+
+.signText p {
+    letter-spacing: 1px;
+    word-wrap: 2px;
+    font-family: "Poppins";
+}
+
+.signInput {
+    width: 30%;
+    display: flex;
+    font-family: "Roboto";
+}
+
+.signInput button{
+    width: 30%;
+    font-family: "Roboto";
+    padding: 0.75rem 1rem;
+    border: none;
+    font-size: 1rem;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: rgb(247, 170, 247);
+}
+
+.signInput button:hover{
+    background-color: rgb(253, 108, 253);
+
+}
+
+.signInput input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: none;
+    outline: navajowhite;
+}
+
+
+
+
+
+/* FOOTER */
+footer {
+    width: 100%;
+    display: flex;
+    padding: 2rem;
+    height: 40vh;
+    justify-content: space-between;
+}
+
+.footer1 {
+    width: 30%;
+}
+
+.footer2, .footer3 {
+    width: 15%;
+}
+
+.footer4 {
+    width: 20%;
+}
+
+footer h5 {
+    color: #102f1c;
+    font-family: "Poppins";
+    font-size: 1.15rem;
+}
+
+footer p {
+    font-family: "Poppins";
+    letter-spacing: 0.5px;
+    opacity: 0.7;
+}
+
+footer span {
+    opacity: 1;
+    font-weight: 900;
+}
+
+.footer1,
+.footer2,
+.footer3,
+.footer4 {
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+}
+
+.footer2 ul,
+.footer3 ul,
+.footer4 ul {
+    display: flex;
+    flex-direction: column;
+}
+.footer2 ul li a,
+.footer3 ul li a,
+.footer4 ul li a{
+    font-family: "Roboto";
+    letter-spacing: 0.5px;
+    cursor: pointer;
+}
+.footer2 ul li a:hover,
+.footer3 ul li a:hover,
+.footer4 ul li a:hover{
+    opacity: 0.8;
+}
+
+.footer2 ul li ,
+.footer3 ul li ,
+.footer4 ul li {
+    list-style: none;
+    margin-top: 0.5rem;
+}
+
+.links {
+    margin-top: 1rem;
+    display: flex;
+    gap: 10px;
+}
+
+.links i {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+
+
+@media screen and (max-width:1060px) {
+    #hamburger {
+        display: flex;
+    }
+
+    ul.hamActive {
+        display: flex;
+        flex-direction: column;
+        top: 100%;
+        height: 50vh;
+        gap: 20px;
+        color: white;
+        background-color: #102f1c;
+        position: absolute;
+        padding: 3rem;
+        right: 0%;
+        text-align: center;
+        width: 50%;
+        transform: translateY(-150%);
+        transition: .3s linear;
+    }
+
+    .navLeft ul li a {
+        color: white;
+        font-size: 1rem;
+        font-family: "Poppins";
+        letter-spacing: 2px;
+    }
+
+
+    ul.visible {
+        transform: translateY(0%); 
+    }
+
+    .products {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .product {
+        width: 40%;
+    }
+
+    .signUp {
+        height: 20vh;
+        flex-direction: column;
+    }
+
+    .signInput {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width:560px){
+    .productsContainer{
+        flex-wrap: wrap;
+    }
+    .product {
+        width: 80%;
+    }
+
+    .signUp {
+        min-height: 30vh;
+    }
+
+    .signText h1 {
+        text-align: center;
+        font-size: 1.5rem;
+    }
+    .signText p {
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    footer {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .footer1 {
+        width: 45%;
+        align-items: flex-start;
+    }
+
+    .footer2 {
+        width: 40%;
+    }
+
+
+    .footer4 ul {
+        white-space: nowrap;
+        align-items: flex-end;
+    }
+
+    .footer3 {
+        white-space: nowrap;
+    }
+
+    .footer4 {
+        width: 40%;
+    }
+}
+

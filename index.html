@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1, initial-scale=1.0">
+    <title>e-commerce</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header>
+        <nav>
+          <h1>Logo</h1>
+          <div class="navLeft">
+            <ul class="hamActive">
+              <li class="liHome"><a href="index.html">Home</a></li>
+              <li><a href="shop.html">Shop</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="hamAndCart">
+            <a href="cart.html" class="cartBag">
+              <i class="fa-solid fa-bag-shopping"></i>
+              <p class="cartValue" id="cartValue">0<p/>
+            </a>
+              <i id="hamburger" class="fa-solid fa-bars"></i>
+            </nav>
+        </div>
+      </header>
+ 
+    <div class="hero">
+        <img class="hero1" src="./pants/kisspng-leaf-green-pattern-leaf-5a9b004c5bee85.6084769915201075963766.png" alt="">
+        <div class="leftHero">
+            <h4>Trade-in-offer</h4>
+            <h1>Super value deals</h1>
+            <h1 class="heroH1">On all products</h1>
+            <p>Save more with coupons & up to 70% off!<br> With "sweet70" coupon code!</p>
+            <button onclick="window.location.href='shop.html'">Shop Now</button>
+        </div>
+        <div class="rightHero">
+            <img class="firstImg" src="./pngkey.com-fashion-model-png-882197.png" alt="">
+            <img class="secondImg" src="./pngkey.com-fashion-model-png-882197.png" alt="">
+        </div>
+        <!-- <div class="socials">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-x-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-pinterest-p"></i>
+            <i class="fa-brands fa-youtube"></i>
+        </div> -->
+    </div>
+
+    <div class="features">
+        <div class="fClas"><img src="./3968608.jpg" alt=""> <p style="background-color: rgba(205, 81, 81, 0.234);">Free Shipping</p></div>
+        <div class="fClas"><img src="./3528496.jpg" alt=""> <p style="background-color: rgba(0, 0, 0, 0.182);">Online Order</p></div>
+        <div class="fClas"><img src="./5240.jpg" alt=""> <p style="background-color: rgba(255, 255, 0, 0.373) ">Save Money</p></div>
+        <div class="fClas"><img src="./4530890.jpg" alt=""> <p style="background-color: rgba(60, 60, 174, 0.395);">Promotions</p></div>
+        <div class="fClas"><img src="./sale.jpg" alt=""> <p style="background-color: rgba(0, 255, 255, 0.31);">Happy Sale</p></div>
+        <div class="fClas"><img src="./Wavy_Bus-31_Single-02.jpg" alt=""> <p style="background-color: rgba(255, 166, 0, 0.418);">F24/7 Support</p></div>
+    </div>
+
+    <div class="products">
+       <h1>Featured Products</h1> 
+       <p>Summer Collection New Modern Design</p>
+
+       <div class="productsContainer" id="shop">
+       </div>
+    </div>
+
+    <div class="ad">
+        <h2>Repair Services</h2>
+        <h1>Up to <span>70% Off</span>- All t-Shirt & Accessories</h1>
+        <button>Explore More</button>
+    </div>
+
+    <div class="newArrival">
+        <h1>New Arrivals</h1> 
+       <p>Winter Collection New Modern Design</p>
+
+       <div class="productsContainer" id="newArrival">  
+       </div>
+    </div>
+
+    <div class="upcoming">
+        <div class="top">
+            <div class="topLeft">
+                <p>crazy deals</p>
+                <h1>buy 1 get 1 <span>FREE!</span></h1>
+                <h4>The best classic dress is on sale at Logo</h4>
+                <button>Learn More</button>
+            </div>
+            <div class="topRight">
+                <p>spring/summer</p>
+                <h1>upcoming season</h1>
+                <h4>The best classic is on sale at Logo</h4>
+                <button>Collection</button>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="bottomFirst">
+                <h1>SEASONAL SALE</h1>
+                <h4>Winter Collection -50% OFF</h4>
+            </div>
+            <div class="bottomSecond">
+                <h1>NEW FOORWEAR COLLECTION</h1>
+                <h4>Spring/Summer 2022</h4>
+            </div>
+            <div class="bottomThird">
+                <h1>T-SHIRTS</h1>
+                <h4>New Trendy Prints</h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="signUp">
+        <div class="signText">
+            <h1>Sign Up For Newsletters</h1>
+            <p>Get E-mail updates about out latest shop and special offers</p>
+        </div>
+        <div class="signInput">
+            <input type="text" placeholder="Enter Your Email Address">
+            <button>Sign Up</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer1">
+            <h1>LOGO</h1>
+            <h5>Contact</h5>
+            <p><span>Address: </span> 563 xyc society abc road, India</p>
+            <p><span>Phone: </span>+91 9858296710 </p>
+            <p><span>Hours: </span>10 AM- 5 PM. MON-SAT</p>
+        </div>
+        <div class="footer2">
+            <h5>About</h5>
+            <ul>
+                <li><a href="about.html">About Us</a></li>
+                <li><a>Delivery Information</a></li>
+                <li><a>Privacy Policy</a></li>
+                <li><a>Terms & Condtions</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="footer3">
+            <h5>My Account</h5>
+            <ul>
+                <li><a>Sign In</a></li>
+                <li><a href="cart.html">View Cart</a></li>
+                <li><a>My Wishlist</a></li>
+                <li><a>Track My Order</a></li>
+                <li><a>Help</a></li>
+            </ul>
+        </div>
+        <div class="footer4">
+            <h5>Install App</h5>
+            <p>From App Store or Google Play</p>
+            <div class="links">
+                <i class="fa-brands fa-app-store"></i>
+                <i class="fa-brands fa-google-play"></i>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        let carts = JSON.parse(localStorage.getItem("carts"))
+        const updateCartValue = () => {
+    const cartValueElement = document.getElementById('cartValue');
+    if (cartValueElement) {
+    cartValueElement.textContent = carts.length;
+    }
+    };
+    updateCartValue();
+    gsap.timeline()
+    .from(".rightHero ",{
+        y:0,
+        x:300,
+        opacity:0,
+        duration:1,
+        ease: "back"
+    })
+
+gsap.timeline()
+    .from(".leftHero",{
+        y:0,
+        x:-300,
+        opacity:0,
+        duration:1.2,
+        ease:"back"
+    })
+
+gsap.from(".fClas",{
+    y:50,
+    opacity:0,
+    duration: 1,
+    scrollTrigger: {
+        trigger: ".fClas",
+        scroll: "body",
+        start: "top 80%",
+        end: "top 58%",
+        scrub: 1,
+    }
+})
+gsap.from(".products",{
+    y:50,
+    opacity:0,
+    duration: 1,
+    scrollTrigger: {
+        trigger: ".products",
+        scroll: "body",
+        start: "top 80%",
+        end: "top 58%",
+        scrub: 1,
+    }
+})
+</script>
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/c549f2c817.js" crossorigin="anonymous"></script>
+   
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+          <h1>Logo</h1>
+          <div class="navLeft">
+            <ul class="hamActive">
+              <li class="liHome"><a href="index.html">Home</a></li>
+              <li><a href="shop.html">Shop</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="hamAndCart">
+            <a href="cart.html" class="cartBag">
+              <i class="fa-solid fa-bag-shopping"></i>
+              <p class="cartValue" id="cartValue">0<p/>
+            </a>
+              <i id="hamburger" class="fa-solid fa-bars"></i>
+            </nav>
+        </div>
+      </header>
+
+    <div class="banner" style="background-image: url(https://images.unsplash.com/photo-1528399783831-8318d62d10e5?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D); background-position: center;">
+        <h1>#CART</h1>
+        <p style="background-color: rgba(0, 0, 0, 0.444);">Add your coupon code and SAVE upto 70%!</p>
+    </div>
+
+    <div class="cartContainer">
+        <div class="cartHeading">
+            <h4>REMOVE</h4>
+            <h4>IMAGE</h4>
+            <h4>PRODUCT</h4>
+            <h4>PRICE</h4>
+            <h4>QUANTITY</h4>
+            <h4>SUBTOTAL</h4>
+        </div>
+        <div class="cartItems">
+            
+        </div>
+
+        <div class="subTotal">
+            <p>TOTAL PRICE: <span class="totalPrice">00</span> </p>
+        </div>
+        <div class="coupon">
+            <input type="text" class="code" onchange="let value = (e)=>e.target.value" placeholder="Enter Coupon Code">
+            <button class="submitCode">Submit</button>
+        </div>
+        <div class="buy">
+            <button class="buyBtn">Buy Now</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer1">
+            <h1>LOGO</h1>
+            <h5>Contact</h5>
+            <p><span>Address: </span> 563 xyc society abc road, India</p>
+            <p><span>Phone: </span>+91 9858296710 </p>
+            <p><span>Hours: </span>10 AM- 5 PM. MON-SAT</p>
+        </div>
+        <div class="footer2">
+            <h5>About</h5>
+            <ul>
+                <li><a href="about.html">About Us</a></li>
+                <li><a>Delivery Information</a></li>
+                <li><a>Privacy Policy</a></li>
+                <li><a>Terms & Condtions</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="footer3">
+            <h5>My Account</h5>
+            <ul>
+                <li><a>Sign In</a></li>
+                <li><a href="cart.html">View Cart</a></li>
+                <li><a>My Wishlist</a></li>
+                <li><a>Track My Order</a></li>
+                <li><a>Help</a></li>
+            </ul>
+        </div>
+        <div class="footer4">
+            <h5>Install App</h5>
+            <p>From App Store or Google Play</p>
+            <div class="links">
+                <i class="fa-brands fa-app-store"></i>
+                <i class="fa-brands fa-google-play"></i>
+            </div>
+        </div>
+    </footer>
+
+    
+
+ 
+    
+    <script>
+        let carts = JSON.parse(localStorage.getItem("carts")) || [];
+        let buyBtn = document.querySelector(".buyBtn")
+
+    const updateCartValue = () => {
+        const cartValueElement = document.getElementById('cartValue');
+        if (cartValueElement) {
+            cartValueElement.textContent = carts.length;
+            }
+    };
+
+        console.log(carts);
+        const updateCartDisplay = ()=>{
+            let cart = document.querySelector(".cartItems")
+            cart.innerHTML = "";
+            let sum = 0;
+
+            if(carts.length>0){
+                carts.forEach(item => {
+                    let newCart = document.createElement('div');
+                    newCart.classList.add("cartData");
+                    newCart.innerHTML = `
+                    <i class="cancelCart fa-solid fa-xmark"  style="cursor:pointer"></i>
+                    <img src="${item.image}" alt="" >
+                    <p class="cartPName">${item.name}</p>
+                    <p class="cartPrice">${item.price}</p>
+                    <input type="number" value="${item.quantity}"  class="cartNumber">
+                    <p class="total">${item.quantity*item.price}</p>
+                    `;
+                    cart.appendChild(newCart);
+
+                    sum += item.quantity * Number(item.price);
+                    console.log(sum);
+                }); 
+                
+
+                const code = document.querySelector('.code');
+                const submitCode = document.querySelector(".submitCode")
+                code.addEventListener('input',(e)=>{
+                    let couponHere = "sweet70"
+                    let couponCode = e.target.value;
+                    if(couponCode == couponHere){
+                        submitCode.addEventListener('click',()=>{
+                            const totalPrice = document.querySelector(".totalPrice")
+                            totalPrice.textContent = Math.floor(sum * 30/100);
+                            code.value = "";
+                        })
+                    }
+                })
+                const totalPrice = document.querySelector(".totalPrice")
+                totalPrice.textContent = sum;
+
+
+            }else {
+                const totalPrice = document.querySelector(".totalPrice")
+                totalPrice.textContent = "0";
+            }
+            buyBtn.addEventListener('click',()=>{
+                if(carts.length > 0){
+                    localStorage.removeItem("carts");
+                    cart.innerHTML = "THANK YOU FOR YOUR ORDER!"
+                    const totalPrice = document.querySelector(".totalPrice")
+                    totalPrice.textContent = "0";
+                    const cartValueElement = document.getElementById('cartValue');
+                    cartValueElement.textContent = "0";
+                }else {
+                    cart.innerHTML = "YOUR CART IS EMPTY,NO ORDER PLACED!"
+                    updateCartValue();
+                }
+
+            })
+            updateCartValue();
+    };
+
+    updateCartDisplay();
+
+    let cart = document.querySelector(".cartItems")
+    cart.addEventListener('click',(e)=>{
+    let positionClick = e.target;
+    if(positionClick.classList.contains('cancelCart')){
+        const index = event.target.dataset.index;
+        carts.splice(index,1);
+        localStorage.setItem("carts",JSON.stringify(carts));
+        updateCartDisplay();
+    }
+})
+
+
+
+
+    </script>
+    <script src="script.js"></script>
+
+<script src="https://kit.fontawesome.com/c549f2c817.js" crossorigin="anonymous"></script>
+</body>
+</html>

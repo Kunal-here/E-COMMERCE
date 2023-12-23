@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>e-commerce</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h1>Logo</h1>
+        <div class="navLeft">
+          <ul class="hamActive">
+            <li class="liHome"><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+      </div>
+      <div class="hamAndCart">
+          <a href="cart.html" class="cartBag">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <p class="cartValue" id="cartValue">0<p/>
+          </a>
+            <i id="hamburger" class="fa-solid fa-bars"></i>
+          </nav>
+      </div>
+    </header>
+
+    <div class="banner" style="background-image: url(https://images.unsplash.com/photo-1520121401995-928cd50d4e27?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)">
+      <h1>#let's_talk</h1>
+      <p>LEAVE A MESSAGE, We love to hear from You!</p>
+    </div>
+
+    <div class="contact">
+        <div class="contactData">
+            <p>GET IN TOUCH</p>
+            <h1>Visit on of our agency locations or contact us today</h1>
+            <h4>Head Office</h4>
+            <p>ABC road near Metro, India</p>
+            <p>EMAIL: xyz@gmail.com</p>
+            <p>CONTACT: 9876543210</p>
+            <p>Monday to Saturday 9.00am to 16pm</p>
+        </div>
+        <form>
+            <p>LEAVE A MESSAGE</p>
+            <h1>We love to hear from you</h1>
+            <input type="text" placeholder="Your Name">
+            <input type="email" placeholder="E-mail">
+            <input type="text" placeholder="Subject" >
+            <textarea cols="30" rows="10" placeholder="Your Message"></textarea>
+            <button class="submit">Submit</button>
+        </form>
+    </div>
+
+    <div class="signUp">
+      <div class="signText">
+        <h1>Sign Up For Newsletters</h1>
+        <p>Get E-mail updates about out latest shop and special offers</p>
+      </div>
+      <div class="signInput">
+        <input type="text" placeholder="Enter Your Email Address" />
+        <button>Sign Up</button>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer1">
+          <h1>LOGO</h1>
+          <h5>Contact</h5>
+          <p><span>Address: </span> 563 xyc society abc road, India</p>
+          <p><span>Phone: </span>+91 9858296710 </p>
+          <p><span>Hours: </span>10 AM- 5 PM. MON-SAT</p>
+      </div>
+      <div class="footer2">
+          <h5>About</h5>
+          <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a>Delivery Information</a></li>
+              <li><a>Privacy Policy</a></li>
+              <li><a>Terms & Condtions</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+      </div>
+      <div class="footer3">
+          <h5>My Account</h5>
+          <ul>
+              <li><a>Sign In</a></li>
+              <li><a href="cart.html">View Cart</a></li>
+              <li><a>My Wishlist</a></li>
+              <li><a>Track My Order</a></li>
+              <li><a>Help</a></li>
+          </ul>
+      </div>
+      <div class="footer4">
+          <h5>Install App</h5>
+          <p>From App Store or Google Play</p>
+          <div class="links">
+              <i class="fa-brands fa-app-store"></i>
+              <i class="fa-brands fa-google-play"></i>
+          </div>
+      </div>
+  </footer>
+
+    <script>
+        let button = document.querySelector(".submit")
+        button.addEventListener('click',(e)=>{
+            e.preventDefault();
+        })
+        
+    </script>
+    <script>
+      let carts = JSON.parse(localStorage.getItem("carts"))
+      const updateCartValue = () => {
+      const cartValueElement = document.getElementById('cartValue');
+      if (cartValueElement) {
+      cartValueElement.textContent = carts.length;
+      }
+      };
+      updateCartValue();
+</script>
+
+    <script src="script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/c549f2c817.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
