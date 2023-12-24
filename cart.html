@@ -128,16 +128,36 @@
                     <img src="${item.image}" alt="" >
                     <p class="cartPName">${item.name}</p>
                     <p class="cartPrice">${item.price}</p>
-                    <input type="number" value="${item.quantity}"  class="cartNumber">
+                    <input type="number" value="${item.quantity}"  class="cartNumber" onChange="let quantityValue = (e)=> e.target.value">
                     <p class="total">${item.quantity*item.price}</p>
                     `;
                     cart.appendChild(newCart);
 
                     sum += item.quantity * Number(item.price);
                     console.log(sum);
-                }); 
-                
 
+
+
+                    const number = document.querySelector(".cartNumber");
+                    number.addEventListener("input",(e)=>{
+                    let quantityTotal = parseInt(e.target.value,10);
+                    if(quantityTotal>0){
+                        let positionThisProductCart = carts.findIndex((value)=> value.prodcut_id == item.id);
+                        if(positionThisProductCart >= 0){
+                            carts[positionThisProductCart].quantity = quantityTotal;
+                            }
+                        }
+                    console.log(carts);
+                    sum = 0;
+                    carts.forEach(cartItem => {
+                        sum += cartItem.quantity * Number(cartItem.price);
+                    });
+                    console.log(sum);
+                   document.querySelector(".total").textContent = sum;
+                    
+                })
+                    
+                }); 
                 const code = document.querySelector('.code');
                 const submitCode = document.querySelector(".submitCode")
                 code.addEventListener('input',(e)=>{
@@ -151,6 +171,9 @@
                         })
                     }
                 })
+
+                
+
                 const totalPrice = document.querySelector(".totalPrice")
                 totalPrice.textContent = sum;
 
