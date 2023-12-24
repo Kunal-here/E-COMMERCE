@@ -139,23 +139,23 @@
 
 
                     const number = document.querySelector(".cartNumber");
-                    number.addEventListener("input",(e)=>{
-                    let quantityTotal = parseInt(e.target.value,10);
-                    if(quantityTotal>0){
-                        let positionThisProductCart = carts.findIndex((value)=> value.prodcut_id == item.id);
-                        if(positionThisProductCart >= 0){
-                            carts[positionThisProductCart].quantity = quantityTotal;
-                            }
-                        }
-                    console.log(carts);
-                    sum = 0;
-                    carts.forEach(cartItem => {
-                        sum += cartItem.quantity * Number(cartItem.price);
-                    });
-                    console.log(sum);
-                   document.querySelector(".total").textContent = sum;
+                //     number.addEventListener("input",(e)=>{
+                //     let quantityTotal = parseInt(e.target.value,10);
+                //     if(quantityTotal>0){
+                //         let positionThisProductCart = carts.findIndex((value)=> value.prodcut_id == item.id);
+                //         if(positionThisProductCart >= 0){
+                //             carts[positionThisProductCart].quantity = quantityTotal;
+                //             }
+                //         }
+                //     console.log(carts);
+                //     sum = 0;
+                //     carts.forEach(cartItem => {
+                //         sum += cartItem.quantity * Number(cartItem.price);
+                //     });
+                //     console.log(sum);
+                //    document.querySelector(".total").textContent = sum;
                     
-                })
+                // })
                     
                 }); 
                 const code = document.querySelector('.code');
