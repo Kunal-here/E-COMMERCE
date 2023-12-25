@@ -78,14 +78,16 @@
       <div class="productDetails">
         <h1 class="h1">Men's Fashion Shirt</h1>
         <h3>Rs 999</h3>
-        <select style="font-family: 'Poppins';" name="" id="">
+        <select style="font-family: 'Poppins'; font-weight: 500; font-size: 1rem;" name="" id="">
+          
           <option value="">s</option>
           <option value="">m</option>
           <option value="">l</option>
           <option value="">xl</option>
         </select>
+        <span style="font-family: 'poppins'; letter-spacing: 1px;">Select Quantity</span>
         <div class="selectBtn">
-          <input class="cartQuantity" type="number" name=""  value="1" />
+          <input class="cartQuantity" type="number" name=""  value="1" style="font-family: 'Poppins'; font-weight: 500; font-size: 0.8rem;" />
           <button class="addCart">Add To Cart</button>
         </div>
         <h4>Product Details</h4>
@@ -236,7 +238,7 @@
     // console.log(selectedProduct);
     let cartQuantity = document.querySelector(".cartQuantity");
     addCart.addEventListener('click',()=>{
-        let finalQuantity = cartQuantity.value;
+        let finalQuantity = parseInt(cartQuantity.value, 10);
       let positionThisProductInCart = carts.findIndex((value) => value.product_id == selectedProduct.id);
     if(carts.length <= 0 || positionThisProductInCart < 0){
         carts.push({
@@ -247,7 +249,7 @@
             quantity: finalQuantity
         });
     }else{
-        carts[positionThisProductInCart].quantity = carts[positionThisProductInCart].quantity + 1;
+      carts[positionThisProductInCart].quantity += finalQuantity;
     }
         localStorage.setItem('carts',JSON.stringify(carts));
         updateCartValue();
