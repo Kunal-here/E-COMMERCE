@@ -179,11 +179,15 @@ const addToCart = (productDetails) => {
 }
 
 const updateCartValue = () => {
-    const cartValueElement = document.getElementById('cartValue');
-    if (cartValueElement) {
-        cartValueElement.textContent = carts.length;
-    }
-};
+        const cartValueElement = document.getElementById('cartValue');
+        let cartTotal = 0
+        if (cartValueElement) {
+            for(let i =0;i<carts.length;i++){
+                cartTotal += carts[i].quantity
+            }
+            cartValueElement.textContent = cartTotal;
+            }
+    };
 
 updateCartValue();
 });
