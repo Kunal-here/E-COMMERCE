@@ -85,7 +85,7 @@
           <option value="">xl</option>
         </select>
         <div class="selectBtn">
-          <input type="number" name="" id="" value="1" />
+          <input class="cartQuantity" type="number" name=""  value="1" />
           <button class="addCart">Add To Cart</button>
         </div>
         <h4>Product Details</h4>
@@ -233,8 +233,10 @@
         console.error('No selected product found.');
     }
 
-    console.log(selectedProduct);
+    // console.log(selectedProduct);
+    let cartQuantity = document.querySelector(".cartQuantity");
     addCart.addEventListener('click',()=>{
+        let finalQuantity = cartQuantity.value;
       let positionThisProductInCart = carts.findIndex((value) => value.product_id == selectedProduct.id);
     if(carts.length <= 0 || positionThisProductInCart < 0){
         carts.push({
@@ -242,7 +244,7 @@
             product_id: selectedProduct.id,
             name: selectedProduct.name,
             price:selectedProduct.price,
-            quantity: 1
+            quantity: finalQuantity
         });
     }else{
         carts[positionThisProductInCart].quantity = carts[positionThisProductInCart].quantity + 1;
