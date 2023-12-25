@@ -128,7 +128,7 @@
                     <img src="${item.image}" alt="" >
                     <p class="cartPName">${item.name}</p>
                     <p class="cartPrice">${item.price}</p>
-                    <input type="number" value="${item.quantity}"  class="cartNumber" onChange="let quantityValue = (e)=> e.target.value">
+                    <input type="text" value="${item.quantity}"  class="cartNumber" onChange="let quantityValue = (e)=> e.target.value">
                     <p class="total">${item.quantity*item.price}</p>
                     `;
                     cart.appendChild(newCart);
