@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="signUpHere">
+        <div class="signUpBox">
+                <h2 style="font-family: 'poppins';">LOGO</h2>
+                <p class="welcome">Welcome Back !!!</p>
+                <h1 class="logInHere">Log In</h1>
+                <input class="signUpName" type="text" placeholder="Enter Name">
+                <input class="inputName" type="email" placeholder="Enter Email" required>
+                <input class="inputEmail" type="password" placeholder="Enter Password" required>
+                <p class="forgot">Forgot Password?</p>
+                <button class="logInBtn" onclick="window.location.href='index.html'">Log In</button>
+                <p class="account">I don't have and acount? <span class="signUP">Sign Up</span>
+                </p>
+        </div>
+    </div>
+
+    <script>
+        const logInBtn = document.querySelector(".logInBtn")
+        const inputName = document.querySelector(".inputName")
+        const inputEmail = document.querySelector(".inputEmail")
+        const welcome = document.querySelector(".welcome")
+        const logInHere = document.querySelector(".logInHere")
+        const signUpName = document.querySelector(".signUpName") 
+        const forgot = document.querySelector(".forgot")
+        const signUP = document.querySelector(".signUP")
+        const account = document.querySelector(".account")
+        logInBtn.addEventListener('click', function() {
+            if (inputEmail.value.trim() !== "" && inputPassword.value.trim() !== "") {
+                window.location.href = 'index.html';
+            } else {
+                window.location.href = "signUp.html"
+            }
+        });
+        signUP.addEventListener('click',(e)=>{
+            signUpName.style.display = "block";
+            logInBtn.textContent = "Sign Up";
+            forgot.textContent = "";
+            welcome.textContent = "";
+            logInHere.textContent = "Sign Up"
+            account.textContent = ""
+            if (inputEmail.value.trim() !== "" && inputPassword.value.trim() !== "") {
+                window.location.href = 'index.html';
+            } else {
+                // window.location.href = "signUp.html"
+            }
+        })
+        forgot.addEventListener('click',()=>{
+            welcome.textContent = "";
+            logInHere.textContent = ""
+            inputEmail.placeholder = "Enter New Passowrd"
+            forgot.textContent = "";
+            if (inputEmail.value.trim() !== "" && inputPassword.value.trim() !== "") {
+                window.location.href = 'index.html';
+            } else {
+                // window.location.href = "signUp.html"
+            }
+        })
+
+    </script>
+</body>
+</html>
