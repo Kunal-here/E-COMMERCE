@@ -447,7 +447,7 @@ ul li a:hover::after{
 
 
 .ad {
-    background-image: url("./ad.jpg");
+    background-image: url("./Hoodies/ad.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -848,7 +848,7 @@ select,.productDetails input {
     flex-direction: column;
     width: 100%;
     min-height: 30vh;
-    background-image: url("./19143282.jpg");
+    background-image: url("./banner/19143282.jpg");
     background-size: cover;
     color: white;
 }
@@ -1121,6 +1121,93 @@ form button{
     background-color: rgb(120, 120, 120);
 }
 
+.signUpHere {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    background-image: url(https://images.unsplash.com/photo-1600758208050-a22f17dc5bb9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+}
+.signUpBox {
+    border-radius: 10px;
+    padding: 3rem 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    width: 50%;
+    background-color: transparent;
+    font-family: "poppins";
+    backdrop-filter: blur(2px);
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.414),
+                inset -5px -5px 20px rgba(255, 255, 255, 0.414);
+}
+.signUpBox p,
+.signUpBox input,
+.signUpBox button {
+    font-family: "poppins";
+}
+.signUpBox span {
+    cursor: pointer;
+    font-family: "Roboto";
+    color: black;
+}
+.signUpBox input {
+    width: 100%;
+    padding: 0.75rem 1.25rem;
+    border: 1px solid rgba(255, 255, 255, 0.473);
+    background-color: transparent;
+    border-radius: 10px;
+    outline: none;
+}
+.signUpBox input::placeholder {
+    color: white;
+}
+.signUpBox h1 {
+    color: #102f1c;
+    font-family: "poppins";
+    letter-spacing: 1px;
+}
+.signUpBox p {
+    opacity: 0.7;
+}
+.forgot {
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    font-size: .8rem;
+}
+.forgot:hover {
+    text-decoration: underline;
+    opacity: 1;
+} 
+.signUpName {
+    display: none;
+}
+.logInBtn {
+    padding: .5rem 1rem;
+    outline: none;
+    background-color: #8564e9;
+    color: white;
+    border: none;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .3s linear;
+    font-weight: 600;
+}
+.logInBtn:hover {
+    background-color: #ffffff;
+    color: #102f1c;
+}
+
+
+
+
+
 
 
 
@@ -1135,7 +1222,7 @@ form button{
         display: flex;
         flex-direction: column;
         top: 100%;
-        height: 50vh;
+        height: 55vh;
         gap: 20px;
         color: white;
         background-color: #102f1c;
@@ -1299,6 +1386,12 @@ form button{
     .leftHero button {
         width: 70%;
     }
+}
+@media screen and (max-width:880px) {
+    .signUpBox {
+        width: 70%;
+    }
+    
 }
 
 @media screen and (max-width:560px){
@@ -1485,6 +1578,9 @@ form button{
     margin-right: 1rem;
 }
 
+.signUpBox {
+    width: 90%;
+}
     
 
     
@@ -1515,7 +1611,15 @@ form button{
        font-weight: 900;
         font-size: 0.5rem;
     }
+
+        .signUpBox {
+            padding: 1rem;
+        }
+        
+
 }
+
+
 
 
 
