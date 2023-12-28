@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=, initial-scale=1.0" />
-    <title>e-commerce</title>
+    <title>Contact</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -17,6 +17,7 @@
             <li><a href="blog.html">Blog</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
+            <li><a href="signUp.html">Sign Up</a></li>
           </ul>
       </div>
       <div class="hamAndCart">
@@ -44,7 +45,7 @@
             <p>CONTACT: 9876543210</p>
             <p>Monday to Saturday 9.00am to 16pm</p>
         </div>
-        <form>
+        <form class="contactForm">
             <p>LEAVE A MESSAGE</p>
             <h1>We love to hear from you</h1>
             <input type="text" placeholder="Your Name">
@@ -62,7 +63,7 @@
       </div>
       <div class="signInput">
         <input type="text" placeholder="Enter Your Email Address" />
-        <button>Sign Up</button>
+        <button onclick="window.location.href='signUp.html'">Sign Up</button>
       </div>
     </div>
 
@@ -87,7 +88,7 @@
       <div class="footer3">
           <h5>My Account</h5>
           <ul>
-              <li><a>Sign In</a></li>
+            <li><a href="signUp.html">Sign In</a></li>
               <li><a href="cart.html">View Cart</a></li>
               <li><a>My Wishlist</a></li>
               <li><a>Track My Order</a></li>
@@ -121,7 +122,7 @@
                 cartTotal += carts[i].quantity
             }
             cartValueElement.textContent = cartTotal;
-            }
+            }  
     };
       updateCartValue();
 </script>
