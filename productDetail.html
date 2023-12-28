@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Product Details</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -17,6 +17,7 @@
             <li><a href="blog.html">Blog</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
+            <li><a href="signUp.html">Sign Up</a></li>
           </ul>
       </div>
       <div class="hamAndCart">
@@ -163,7 +164,7 @@
       </div>
       <div class="signInput">
         <input type="text" placeholder="Enter Your Email Address" />
-        <button>Sign Up</button>
+        <button onclick="window.location.href='signUp.html'">Sign Up</button>
       </div>
     </div>
 
@@ -188,7 +189,7 @@
       <div class="footer3">
           <h5>My Account</h5>
           <ul>
-              <li><a>Sign In</a></li>
+              <li><a href="signUp.html">Sign In</a></li>
               <li><a href="cart.html">View Cart</a></li>
               <li><a>My Wishlist</a></li>
               <li><a>Track My Order</a></li>
@@ -213,7 +214,7 @@
       const h1 = document.querySelector(".h1");
       const addCart = document.querySelector(".addCart")
 
-     const updateCartValue = () => {
+      const updateCartValue = () => {
         const cartValueElement = document.getElementById('cartValue');
         let cartTotal = 0
         if (cartValueElement) {
@@ -221,7 +222,7 @@
                 cartTotal += carts[i].quantity
             }
             cartValueElement.textContent = cartTotal;
-            }
+            }  
     };
 
       const selectedProduct = JSON.parse(localStorage.getItem('selectedProduct'));
@@ -287,3 +288,12 @@
     <script src="https://kit.fontawesome.com/c549f2c817.js" crossorigin="anonymous"></script>
   </body>
 </html>
+
+
+
+
+
+
+
+
+
