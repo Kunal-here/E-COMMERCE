@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Blog</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,6 +18,7 @@
               <li><a href="blog.html">Blog</a></li>
               <li><a href="about.html">About</a></li>
               <li><a href="contact.html">Contact</a></li>
+              <li><a href="signUp.html">Sign Up</a></li>
             </ul>
         </div>
         <div class="hamAndCart">
@@ -30,14 +31,14 @@
         </div>
       </header>
 
-    <div class="banner" style="background-image: url(./design-space-decorated-with-leaves-website-banner-template.jpg);">
+    <div class="banner" style="background-image: url(./shirts/design-space-decorated-with-leaves-website-banner-template.jpg);">
     </div>
 
     <div class="blog">
         <div class="blogContainer">
             <div class="leftBlog">
                 <i class="fa-solid fa-quote-left"></i>
-                <img src="./blog1.jpg" alt="">
+                <img src="./blog/blog1.jpg" alt="">
             </div>
             <div class="rightBlog">
                 <h1>Chose Your Favourite Here</h1>
@@ -49,7 +50,7 @@
         <div class="blogContainer">
             <div class="leftBlog">
                 <i class="fa-solid fa-quote-left"></i>
-                <img src="./blog2.jpg" alt="">
+                <img src="./blog/blog2.jpg" alt="">
             </div>
             <div class="rightBlog">
                 <h1>The Cotton-Jersey Zip-Up Hoodie</h1>
@@ -61,7 +62,7 @@
         <div class="blogContainer">
             <div class="leftBlog">
                 <i class="fa-solid fa-quote-left"></i>
-                <img src="./blog3.jpg" alt="">
+                <img src="./blog/blog3.jpg" alt="">
             </div>
             <div class="rightBlog">
                 <h1>Runway-Inspired Trend</h1>
@@ -73,7 +74,7 @@
         <div class="blogContainer">
             <div class="leftBlog">
                 <i class="fa-solid fa-quote-left"></i>
-                <img src="./blog4.jpg" alt="">
+                <img src="./blog/blog4.jpg" alt="">
             </div>
             <div class="rightBlog">
                 <h1>Must-Have Skater Girls Items</h1>
@@ -91,7 +92,7 @@
         </div>
         <div class="signInput">
             <input type="text" placeholder="Enter Your Email Address">
-            <button>Sign Up</button>
+            <button onclick="window.location.href='signUp.html'">Sign Up</button>
         </div>
     </div>
 
@@ -116,7 +117,7 @@
         <div class="footer3">
             <h5>My Account</h5>
             <ul>
-                <li><a>Sign In</a></li>
+                <li><a href="signUp.html">Sign In</a></li>
                 <li><a href="cart.html">View Cart</a></li>
                 <li><a>My Wishlist</a></li>
                 <li><a>Track My Order</a></li>
@@ -144,6 +145,7 @@
             }
             cartValueElement.textContent = cartTotal;
             }
+            
     };
     updateCartValue();
 </script>
