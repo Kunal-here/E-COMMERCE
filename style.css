@@ -848,7 +848,7 @@ select,.productDetails input {
     flex-direction: column;
     width: 100%;
     min-height: 30vh;
-    background-image: url("./banner/19143282.jpg");
+    background-image: url("./19143282.jpg");
     background-size: cover;
     color: white;
 }
