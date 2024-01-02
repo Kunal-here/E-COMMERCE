@@ -447,7 +447,7 @@ ul li a:hover::after{
 
 
 .ad {
-    background-image: url("./Hoodies/ad.jpg");
+    background-image: url("./ad.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
